@@ -79,7 +79,7 @@ app.get('/borrar/:id', (req, res) => {
 // SELECT ALL
 app.get( apiusers, (req, res) => {
   console.log('get all')
-  var sql = 'SELECT Id,Nombre,Apellido,Edad FROM users';
+  var sql = 'SELECT nombre,apellido FROM usuarios';
   conn.query(sql,  (err, result) => {
     if (err) throw err;
     console.log(result);
