@@ -60,7 +60,7 @@ app.use(bodyParser.json());
 // =========  API ===========
 // SELECT ID
 app.get('/', (req, res) => {
-  var sql = 'SELECT Nombre,Apellido FROM usuarios';
+  var sql = 'SELECT nombre,apellido FROM usuarios';
   conn.query(sql, [parseInt(req.params.id)],  (err, result) => {
     if (err) throw err;
     console.log(result);
